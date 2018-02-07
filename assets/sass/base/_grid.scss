@@ -1,0 +1,82 @@
+.container, .container-grid {
+    margin: 0 auto;
+    width: 100%;
+
+    @include mobile {
+        width: 90%;
+    }
+    @include tablet {
+        max-width: 728px;
+    }
+    @include small-desktop {
+        max-width: 1020px;
+    }
+    @include desktop {
+        max-width: 1260px;
+    }
+}
+
+.container {
+    @include clearfix;
+}
+
+.container-grid {
+    display: grid;
+    &.two {
+        grid-template-columns: 48% 48%;
+        grid-column-gap: 4%;
+        @include mobile {
+            grid-template-columns: 100%;
+            grid-column-gap: 0;
+        }
+        _:-ms-lang(x), .left, .right { // IE
+            float: left;
+            box-sizing: border-box;
+            width: 50%;
+            padding: 0 1%;
+            &:nth-of-type(3) {
+                clear: both;
+            }
+        }
+    }
+    &.three {
+        grid-template-columns: 31% 31% 31%;
+        grid-column-gap: 3.5%;
+    }
+    &.four {
+        grid-template-columns: 22% 22% 22% 22%;
+        grid-column-gap: 4%;
+        @include mobile {
+            grid-template-columns: 48% 48%;
+            grid-column-gap: 4%;
+        }
+        @include tablet {
+            grid-template-columns: 31% 31% 31%;
+            grid-column-gap: 3.5%;
+        }
+        _:-ms-lang(x), .grid-fallback { // IE
+            float: left;
+            box-sizing: border-box;
+            width: 25%;
+            padding: 0 1%;
+            &:nth-of-type(5) {
+                clear: both;
+            }
+        }
+    }
+    a.button {
+        margin: 0 auto;
+    }
+}
+
+@mixin col-half {
+  display: block;
+  @include tablet-above {
+    width: calc(50%);
+    float: left;
+  }
+}
+
+.col-half {
+    @include col-half;
+}

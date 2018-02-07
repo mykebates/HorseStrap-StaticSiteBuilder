@@ -1,0 +1,47 @@
+@mixin font-proxima() {
+    font-family: "proxima-nova";
+}
+
+@mixin font-proxima-thin() {
+    @include font-proxima; font-weight: 100;
+}
+
+@mixin font-proxima-light() {
+    @include font-proxima; font-weight: 300;
+}
+
+@mixin font-proxima-italic() {
+    @include font-proxima; font-style: italic;
+}
+
+@mixin font-proxima-semi-bold() {
+    @include font-proxima; font-weight: 600;
+}
+
+@mixin font-proxima-bold() {
+    @include font-proxima; font-weight: 700;
+}
+
+@mixin font-proxima-bold-italic() {
+    @include font-proxima; font-weight: 700; font-style: italic;
+}
+
+@mixin font-zilla-regular() {
+    font-family: 'Zilla Slab', serif; font-weight: 400;
+}
+
+@mixin font-zilla-regular-italic() {
+    font-family: 'Zilla Slab', serif; font-weight: 400; font-style: italic;
+}
+
+@mixin font-zilla-medium() {
+    font-family: 'Zilla Slab', serif; font-weight: 500;
+}
+
+@mixin font-zilla-semi-bold() {
+    font-family: 'Zilla Slab', serif; font-weight: 700;
+}
+
+@mixin font-zilla-bold() {
+    font-family: 'Zilla Slab', serif; font-weight: 800;
+}
